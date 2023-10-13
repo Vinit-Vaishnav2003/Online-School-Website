@@ -55,10 +55,10 @@ function Navbar({Children}) {
   return (
     <>
       <div>
-        <div style={{width:isOpen ? "170px":"50px"}}className="navbar">
+        <div style={{width:isOpen ? "170px":"100px"}}className="navbar">
           <div className="top_section">
-            <h1 className="logo">Menu</h1>
-            <div className="bars">
+            <h1 style={{display:isOpen ? "block":"none"}} className="logo">Menu</h1>
+            <div style={{marginLeft:isOpen ? "50px":"0px"}} className="bars">
               <FaBars onClick={toggle} />
             </div>
           </div>
