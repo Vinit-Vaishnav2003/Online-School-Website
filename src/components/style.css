@@ -3,88 +3,91 @@
     padding:0;
     text-decoration: none;
 }
-.form_container {
-    width:30%;
 
-}
-@media screen  and (max-width :1000px) {
-    .form_container{
-        width :45%
-    }
-    
-}
-@media screen and (max-width :700px) {
-    .form_container{
-        width :65%
-    }
-    
-}
-.img{
-    width: 10%;
-}
 
-.navbar{
+.sidebar {
+    width: 100px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: width 0.3s ease-in-out;
+    background-color: #222;
+    color: white;
     display: flex;
     flex-direction: column;
-    
-    text-decoration: none;
-    
-    background:#2b0364;
-    color: #fff;
-    height: 100vh;
-    width: 20%;
-    
-}
-
-.top_section{
-    display: flex;
     align-items: center;
-    padding: 17px ;
-
-}
-.logo
-{
-    font-size: 25px;
-    
-}
-.bars{
+    padding-top: 10px;
+  }
+  
+  .sidebar-icon {
+    padding: 5px;
     display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    align-items: left;
+    text-align: left;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    size: 50px;
+  }
+  
+  .icon-name {
     font-size: 20px;
-    margin-left: 50px;
-}
-.link{
+    align-items: left;
+    text-align: left;
+  }
+  
+  .expand-button {
+    cursor: pointer;
+    padding: 10px;
+    text-align: center;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .expanded {
+    width: 200px;
+    
+  }
+  
+  .sidebar-icon .dropdown-options {
+    overflow: hidden;
+    /* transition: max-height 2s ease-in-out; */
+  }
+  
+  .sidebar-icon.active .dropdown-options {
+    overflow: hidden;
+    /* transition: max-height 2s ease-in-out; */
+  }
+  
+  .dropdown-options {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-height: 0px;
+    transition: max-height 0.3s ease-in-out;
+  }
+  
+  .big{
+    max-height: 100px;
+  }
+  .option {
+    padding: 5px 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  }
+  
+  .option:hover {
+    background-color: #555;
+  }
+  
+  .option:hover,
+  .option:active {
     color: #fff;
-    text-decoration: none;
-    padding: 5px ;
-    transition: all 0.5s;
-   
-}
-.link:hover{
-    background: lightgoldenrodyellow;
-    color:#2b0364;
-    transition: all 0.5s;
-
-}
-.active{
-    background-color:lightgoldenrodyellow ;
-    color:#2b0364;
-}
-.icons, .link_text{
-    font-size: 20px;
-
-}
-@media screen  and (max-width :100px) {
-    .navbar{
-        width :45%
-    }
-    
-}
-@media screen and (max-width :500px) {
-    .navbar{
-        width :45%
-    }
-}
-
+  }
+  
+  .option:active {
+    background-color: #444;
+  }
 
 
